@@ -1,6 +1,11 @@
+
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+// Load Montage
+import Montage from 'montage';
+console.log(Montage)
 
 class App extends Component {
   render() {
