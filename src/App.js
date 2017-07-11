@@ -3,11 +3,19 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-// Load Montage
-import Montage from 'montage';
-console.log(Montage)
-
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { rangeValue: 50 };
+  }
+
+  resetRange() {
+    this.setState(prevState => ({
+      rangeValue: 0
+    }));
+  }
+
   render() {
     return (
       <div className="App">
@@ -16,7 +24,10 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          <montage-title data-module-id="ui/title.reel"></montage-title>
+          <montage-hello-world data-module-id="ui/hello-world.reel"></montage-hello-world>
+          <montage-bindings data-module-id="ui/bindings.reel" data-value={this.state.rangeValue}></montage-bindings>
+          <button onClick={(e) => this.resetRange(e)}>Reset</button>
         </p>
       </div>
     );

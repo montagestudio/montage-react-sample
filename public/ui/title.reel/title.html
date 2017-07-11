@@ -2,7 +2,7 @@
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="title.css">
     <script type="text/montage-serialization">
     {
         "owner": {
@@ -13,18 +13,16 @@
         "title": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "title"}
-            },
-            "bindings": {
-                "value": {"<->": "@owner.currentDate"}
+                "element": {"#": "title"},
+                "value": "Welcome to MontageJS"
             }
         }
     }
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="Main">
-        <h1 data-montage-id="title" class="Title"></h1>
+    <div data-montage-id="owner" class="Title">
+        <div data-montage-id="title"></div>
     </div>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bindings.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "value": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "value"}
+            },
+            "bindings": {
+                "value": {"<-": "@slider.value"}
+            }
+        },
+        "slider": {
+            "prototype": "montage/ui/slider.reel",
+            "properties": {
+                "element": {"#": "slider"}
+            },
+            "bindings": {
+                "value": {"<->": "@owner.value"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Bindings">
+        <h4>Binding Example:</h4>
+        <input data-montage-id="slider" type="range" min="0" max="100" />
+        <div data-montage-id="value"></div>
+    </div>
+</body>
+</html>

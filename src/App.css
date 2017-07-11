@@ -22,3 +22,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+button {
+    border: 1px solid #63ccff;
+    height: 35px;
+    width: 80px;
+    color: white;
+    background: #039be5;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 20px;   
+}
+
+button:active{
+    background: #006db3;
+}

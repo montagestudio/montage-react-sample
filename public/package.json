@@ -1,0 +1,11 @@
+{
+  "name": "montage-custom-element-sample",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "montage":"17.0.10",
+    "collections": "5.0.6",
+    "weak-map": "^1.0.5",
+    "frb": "4.0.1"
+  }
+}

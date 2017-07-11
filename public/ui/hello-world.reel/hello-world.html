@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="hello-world.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "hello"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.message"}
+            }
+        },
+        "button": {
+            "prototype": "montage/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "label": "Click Me!"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="HelloWorld">
+        <div data-montage-id="hello"></div>
+        <button data-montage-id="button"></button>
+    </div>
+</body>
+</html>
