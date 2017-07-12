@@ -24,9 +24,9 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
-          <montage-title data-module-id="ui/title.reel"></montage-title>
-          <montage-hello-world data-module-id="ui/hello-world.reel"></montage-hello-world>
-          <montage-bindings data-module-id="ui/bindings.reel" data-value={this.state.rangeValue}></montage-bindings>
+          <montage-element data-module-id="ui/title.reel"></montage-element>
+          <montage-element data-module-id="ui/hello-world.reel"></montage-element>
+          <montage-element data-module-id="ui/bindings.reel" data-value={this.state.rangeValue}></montage-element>
           <button onClick={(e) => this.resetRange(e)}>Reset</button>
         </p>
       </div>
