@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "montage": "montagejs/montage#amd",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.8"
   },
   "scripts": {
+    "postinstall": "cd public && npm install --legacy-bundling",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
