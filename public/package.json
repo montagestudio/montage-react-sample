@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "montage":"thibaultzanini/montage#813d1dcb85596942d2020294d784b2bf2480f219",
+    "montage":"thibaultzanini/montage#148528c46ea5c9aa4617b3d3280e885e0ecd0b23",
     "collections": "5.0.6",
     "weak-map": "^1.0.5",
     "frb": "4.0.1"

@@ -5,6 +5,8 @@ import './App.css';
 
 class App extends Component {
 
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
     constructor(props) {
         super(props);
         this.state = { rangeValue: 0 };
@@ -34,7 +36,14 @@ class App extends Component {
     }
 
     render() {
-        let rangeValue = this.state.rangeValue;
+        let rangeValue = this.state.rangeValue,
+            listItems = this.numbers.map(function (number) {
+            return (
+                <li key={number.toString()}>
+                    <montage-element data-module-id="montage/ui/text.reel" data-value={number}></montage-element>
+                </li>
+            );
+        });
 
         return (
             <div className="App" ref={(app) => { this.app = app; }}>
@@ -43,11 +52,23 @@ class App extends Component {
                     <h2>Welcome to React</h2>
                 </div>
                 <div className="App-intro">
-                    <montage-element data-module-id="ui/title.reel"></montage-element>
-                    <montage-element data-module-id="ui/hello-world.reel"></montage-element>
-                    <h4>How many YEAH? : {rangeValue}</h4>
-                    <montage-element data-module-id="ui/bindings.reel" data-value={rangeValue}></montage-element>
-                    <button onClick={(e) => this.resetRange(e)}>Reset</button>
+                    <article>
+                        <montage-element data-module-id="ui/title.reel"></montage-element>
+                    </article>
+                    <article>
+                        <h4>Montage component Sample:</h4>
+                        <montage-element data-module-id="ui/hello-world.reel"></montage-element>
+                    </article>
+                    <article>
+                        <h4>Montage + React Bindings Sample:</h4>
+                        <montage-element data-module-id="ui/bindings.reel" data-value={rangeValue}></montage-element>
+                        <p>How many Like? (react binding) : {rangeValue}</p>
+                        <button onClick={(e) => this.resetRange(e)}>Reset Counter (react)</button>
+                    </article>
+                    <article>
+                        <h4>React list + Montage text component: </h4>
+                        <ul className="list-number">{listItems}</ul>
+                    </article>
                 </div>
             </div>
         );
