@@ -1,0 +1,14 @@
+.HelloWorld button {
+    border: 1px solid #63ccff;
+    height: 35px;
+    width: 80px;
+    color: white;
+    background: #039be5;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 20px;   
+}
+
+.HelloWorld button:active{
+    background: #006db3;
+}

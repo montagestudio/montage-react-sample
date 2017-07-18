@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bindings.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "value": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "value"}
+            },
+            "bindings": {
+                "value": {"<-": "@slider.value"}
+            }
+        },
+        "slider": {
+            "prototype": "montage/ui/slider.reel",
+            "properties": {
+                "element": {"#": "slider"}
+            },
+            "bindings": {
+                "value": {"<->": "@owner.value"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Bindings">
+        <div>
+            <label>Likes: </label>
+            <input data-montage-id="slider" type="range" min="0" max="100" />
+        </div>
+        <p>
+            <span>How many Like? (montage binding) :</span>
+            <span data-montage-id="value"></span>
+        </p>
+    </div>
+</body>
+</html>

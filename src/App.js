@@ -3,24 +3,76 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-// Load Montage
-import Montage from 'montage';
-console.log(Montage)
-
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    constructor(props) {
+        super(props);
+        this.state = { rangeValue: 0 };
+        this.handleAttributeChange = this.handleAttributeChange.bind(this);
+    }
+
+    resetRange() {
+        this.setState(prevState => ({
+            rangeValue: 0
+        }));
+    }
+
+    handleAttributeChange(event) {
+        if (event.detail.attribute === "data-value") {
+            this.setState(prevState => ({
+                rangeValue: event.detail.newValue
+            }));
+        }
+    }
+
+    componentDidMount() {
+        this.app.addEventListener("dataAttributeChange", this.handleAttributeChange);
+    }
+
+    componentWillUnmount() {
+        this.app.removeEventListener("dataAttributeChange", this.handleAttributeChange);
+    }
+
+    render() {
+        let rangeValue = this.state.rangeValue,
+            listItems = this.numbers.map(function (number) {
+            return (
+                <li key={number.toString()}>
+                    <montage-element data-module-id="montage/ui/text.reel" data-value={number}></montage-element>
+                </li>
+            );
+        });
+
+        return (
+            <div className="App" ref={(app) => { this.app = app; }}>
+                <div className="App-header">
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <h2>Welcome to React</h2>
+                </div>
+                <div className="App-intro">
+                    <article>
+                        <montage-element data-module-id="ui/title.reel"></montage-element>
+                    </article>
+                    <article>
+                        <h4>Montage component Sample:</h4>
+                        <montage-element data-module-id="ui/hello-world.reel"></montage-element>
+                    </article>
+                    <article>
+                        <h4>Montage + React Bindings Sample:</h4>
+                        <montage-element data-module-id="ui/bindings.reel" data-value={rangeValue}></montage-element>
+                        <p>How many Like? (react binding) : {rangeValue}</p>
+                        <button onClick={(e) => this.resetRange(e)}>Reset Counter (react)</button>
+                    </article>
+                    <article>
+                        <h4>React list + Montage text component: </h4>
+                        <ul className="list-number">{listItems}</ul>
+                    </article>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
