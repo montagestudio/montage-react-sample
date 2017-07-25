@@ -8,6 +8,7 @@ var Component = require("montage/ui/component").Component;
  * @extends Component
  */
 exports.HelloWorld = Component.specialize(/** @lends HelloWorld# */ {
+    
     defaultMessage: {
         value: "Hello World!"
     },

@@ -1,14 +1,36 @@
-.HelloWorld button {
-    border: 1px solid #63ccff;
-    height: 35px;
-    width: 80px;
-    color: white;
-    background: #039be5;
-    border-radius: 4px;
+button {
+    background-color: #3273dc;
+    color: #fff;
     outline: none;
-    margin-top: 20px;   
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-left: calc(0.625em - 1px);
+    padding-right: calc(0.625em - 1px);
+    padding-top: calc(0.375em - 1px);
+    position: relative;
+    vertical-align: top;
+    user-select: none;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.HelloWorld button:active{
-    background: #006db3;
+button:active{
+    background-color: #2366d1;
+    border-color: transparent;
+    -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
+    color: #fff;
 }

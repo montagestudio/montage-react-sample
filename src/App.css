@@ -16,6 +16,9 @@
 
 .App-intro {
   font-size: large;
+  max-width: 768px;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 @keyframes App-logo-spin {
@@ -23,23 +26,99 @@
   to { transform: rotate(360deg); }
 }
 
-.App article+article {
-  margin-bottom: 30px;
+.App-intro {
+  padding-bottom: 40px; 
+}
+
+.App-intro article.example {
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+.example {
+    border: 1px solid #ddd;
+    border-top-right-radius: 3px;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.example:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.example:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.example:before {
+  content:"EXAMPLE";
+    background: #ddd;
+    border-radius: 3px 3px 0 0;
+    bottom: 100%;
+    display: inline-block;
+    font-size: .85rem;
+    font-weight: bold;
+    left: -1px;
+    letter-spacing: 1px;
+    padding: 3px 5px;
+    position: absolute;
+    vertical-align: top;
+}
+
+.example.montage {
+    border: 1px solid #ffdd57;
+}
+
+.example.montage:before {
+    content:"MONTAGE";
+    background: #ffdd57;
+}
+
+.example.react {
+    border: 1px solid #ff3860;
+}
+
+.example.react:before {
+    content:"REACT";
+    background: #ff3860;
 }
 
 button {
-    border: 1px solid #63ccff;
-    height: 35px;
-    min-width: 80px;
-    color: white;
-    background: #039be5;
-    border-radius: 4px;
+    background-color: #3273dc;
+    color: #fff;
     outline: none;
-    margin-top: 20px;   
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-left: calc(0.625em - 1px);
+    padding-right: calc(0.625em - 1px);
+    padding-top: calc(0.375em - 1px);
+    position: relative;
+    vertical-align: top;
+    user-select: none;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    text-align: center;
+    white-space: nowrap;
 }
 
 button:active{
-    background: #006db3;
+    background-color: #2366d1;
+    border-color: transparent;
+    -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
+    color: #fff;
 }
 
 .list-number {
@@ -47,7 +126,7 @@ button:active{
   width: 200px;
   margin: auto;
   padding: 0;
-  border: 1px solid #bbb;
+  border: 1px solid #ddd;
   height: 250px;
   overflow: auto;
 }
@@ -60,5 +139,5 @@ button:active{
 }
 
 .list-number li+li {
-    border-top: 1px solid #bbb;
+    border-top: 1px solid #ddd;
   }

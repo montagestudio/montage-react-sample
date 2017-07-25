@@ -8,9 +8,5 @@ var Component = require("montage/ui/component").Component;
  * @extends Component
  */
 exports.Title = Component.specialize(/** @lends Title# */ {
-    constructor: {
-        value: function Title() {
-            this.super();
-        }
-    }
+
 });
