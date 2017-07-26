@@ -22,5 +22,8 @@
   ],
   "bundle": [
     "ui/main.reel"
-  ]
+  ],
+  "scripts": {
+    "start": "minit serve"
+  }
 }

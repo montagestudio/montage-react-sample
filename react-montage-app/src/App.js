@@ -56,7 +56,7 @@ class App extends Component {
                 </article>
                 <div className="App-intro">
                     <article className="example">
-                        <h4>Montage Component Sample:</h4>
+                        <h4>Montage Custom Element Sample:</h4>
                         <div className="example montage">
                             <montage-element data-module-id="ui/hello-world.reel"></montage-element>
                         </div>
@@ -72,7 +72,7 @@ class App extends Component {
                         </div>
                     </article>
                     <article className="example">
-                        <h4>React List + Montage Text Component: </h4>
+                        <h4>React List + Montage Text Custom Element: </h4>
                         <ul className="list-number">{listItems}</ul>
                     </article>
                 </div>
