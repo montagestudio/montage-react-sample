@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="list.css">
+    <script src="/react-components/list-item.js"></script>
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            }
+        },
+
+         "repetition": {
+            "prototype": "montage/ui/repetition.reel",
+            "values": {
+                "element": {"#": "repetition"},
+                "content": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+            }
+        },
+
+        "label": {
+            "prototype": "montage/ui/component",
+            "values": {
+                "element": {"#": "label"},
+                "hasTemplate": false,
+                "element.dataset.value": {"<-": "@repetition:iteration.object"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <article data-montage-id="owner" class="List">
+        <h4>Montage List + React Text Custom Element: </h4>
+        <ul data-montage-id="repetition" class="list-number">
+            <react-list-item data-montage-id="label"></react-list-item>
+        </ul>
+    </article>
+</body>
+</html>

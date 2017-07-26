@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/react-components/bindings.js"></script>
+    <link rel="stylesheet" type="text/css" href="bindings.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            }
+        },
+        "value": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "value"},
+                "value": {"<-": "@slider.value"}
+            }
+        },
+        "slider": {
+            "prototype": "montage/ui/slider.reel",
+            "values": {
+                "element": {"#": "slider"},
+                "value": 0
+            }
+        },
+        "reactTitle": {
+            "value": {"#": "react-title"},
+            "values": {
+                "dataset.value": {"<->": "@slider.value"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <article data-montage-id="owner" class="Bindings">
+        <h4>Montage + React Bindings Sample:</h4>
+        <div class="example montage">
+            <div>
+                <label>Likes: </label>
+                <input data-montage-id="slider" type="range" min="0" max="100" />
+            </div>
+            <p>
+                <span>How many likes Montage? :</span>
+                <span data-montage-id="value"></span>
+            </p>
+        </div>
+        <div class="example react">
+            <react-bindings data-montage-id="react-title" data-value="0"></react-bindings>
+        </div>
+    </article>
+</body>
+</html>

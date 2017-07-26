@@ -1,0 +1,156 @@
+
+/* 
+ * This file is reserved for your global style rules. 
+ */
+
+html {
+    font-family: sans-serif;
+    color: #333;
+}
+
+body {
+    margin: 0; /* Remove default margin */
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+    font-size: large;
+    max-width: 768px;
+    margin: auto;
+    color: rgba(0, 0, 0, 0.7);
+}   
+
+.App-intro {
+  padding-bottom: 40px; 
+}
+
+.App-intro article.example {
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+.example {
+    border: 1px solid #ddd;
+    border-top-right-radius: 3px;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.example:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.example:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.example:before {
+  content:"EXAMPLE";
+    background: #ddd;
+    border-radius: 3px 3px 0 0;
+    bottom: 100%;
+    display: inline-block;
+    font-size: .85rem;
+    font-weight: bold;
+    left: -1px;
+    letter-spacing: 1px;
+    padding: 3px 5px;
+    position: absolute;
+    vertical-align: top;
+}
+
+.example.montage {
+    border: 1px solid #ffdd57;
+}
+
+.example.montage:before {
+    content:"MONTAGE";
+    background: #ffdd57;
+}
+
+.example.react {
+    border: 1px solid #ff3860;
+}
+
+.example.react:before {
+    content:"REACT";
+    background: #ff3860;
+}
+
+button {
+    background-color: #3273dc;
+    color: #fff;
+    outline: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-left: calc(0.625em - 1px);
+    padding-right: calc(0.625em - 1px);
+    padding-top: calc(0.375em - 1px);
+    position: relative;
+    vertical-align: top;
+    user-select: none;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+button:active{
+    background-color: #2366d1;
+    border-color: transparent;
+    -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
+    color: #fff;
+}
+
+.list-number {
+  list-style: none;
+  width: 200px;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #ddd;
+  height: 250px;
+  overflow: auto;
+}
+
+.list-number li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-number li {
+    border-top: 1px solid #ddd;
+}
+
+.list-number react-list-item:first-of-type li {
+    border-top: none;
+}

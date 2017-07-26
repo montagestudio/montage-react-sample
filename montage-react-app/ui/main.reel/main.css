@@ -1,0 +1,42 @@
+
+
+.bindings::before {
+    content: attr(data-name)
+}
+
+.big-list {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    margin: auto;
+    border: 1px solid #bbb;
+    color: black;
+}
+
+.big-list .row {
+    height: 80px;
+    display: flex;
+}
+
+.big-list .row  {
+    border-top: 1px solid #bbb;
+}
+
+.big-list:first-child {
+    border-top: none;
+}
+
+.big-list .row  span {
+    display: flex;
+    align-items: center;
+}
+
+.big-list .index {
+    width: 40px;
+    border-right: 1px solid #bbb;
+    justify-content: center;
+}
+
+.big-list .hash {
+    padding-left: 16px;
+}
